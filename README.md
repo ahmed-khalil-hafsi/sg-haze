@@ -1,6 +1,6 @@
 # sg-haze
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22764304.svg)](https://doi.org/10.5281/zenodo.22764304)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22764304-blue)](https://doi.org/10.5281/zenodo.22764304)
 
 A distance-weighted wildfire emission index for Singapore haze, built entirely
 from open, near-real-time data.
