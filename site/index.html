@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A distance-weighted wildfire emission index for Singapore haze, 2014–2026</title>
+<meta name="author" content="Ahmed Khalil Hafsi">
+<meta name="citation_title" content="A distance-weighted wildfire emission index for Singapore haze: diagnostic value and limited incremental forecast skill, 2014–2026">
+<meta name="citation_author" content="Hafsi, Ahmed Khalil">
+<meta name="citation_publication_date" content="2026/09/15">
+<meta name="citation_pdf_url" content="https://sg-haze.mail-7dd.workers.dev/paper.pdf">
+<meta name="description" content="Daily CAMS GFAS wildfire emissions, weighted by distance from Singapore, evaluated against NEA 24-hour PSI: useful as a diagnostic, but the index alone does not beat persistence as a forecast.">
+<style>
+  :root{ --fg:#111; --mut:#555; --rule:#ccc; --link:#00529b; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{ margin:0; background:#fff; color:var(--fg); font:17px/1.58 "Times New Roman",Times,Georgia,serif; }
+  .page{ max-width:44em; margin:0 auto; padding:56px 24px 80px; }
+  h1{ font-size:1.62em; line-height:1.28; font-weight:700; margin:0 0 .55em; text-align:center; }
+  .author{ text-align:center; font-size:1.08em; margin:0 0 .3em; }
+  .byline{ text-align:center; color:var(--mut); font-size:.9em; margin:0 0 1.4em; }
+  .links{ text-align:center; margin:0 0 2.2em; font-size:.98em; }
+  .links a{ margin:0 .7em; }
+  h2{ font-size:1.08em; font-weight:700; margin:2.4em 0 .7em; }
+  p{ margin:0 0 1em; text-align:justify; hyphens:auto; }
+  .abstract{ padding:0 2em; font-size:.95em; }
+  .abstract b{ font-variant:small-caps; letter-spacing:.04em; }
+  figure{ margin:1.8em 0; }
+  figure img{ width:100%; height:auto; display:block; border:1px solid var(--rule); }
+  figcaption{ font-size:.86em; margin-top:.65em; line-height:1.48; text-align:justify; }
+  table{ border-collapse:collapse; width:100%; min-width:420px; font-size:.88em; }
+  caption{ caption-side:bottom; text-align:justify; font-size:.86em; margin-top:.65em; line-height:1.48; }
+  th,td{ padding:.34em .7em .34em 0; text-align:left; }
+  thead{ border-top:1px solid var(--fg); } thead th{ border-bottom:1px solid var(--fg); }
+  tbody tr:last-child td{ border-bottom:1px solid var(--fg); }
+  td.n,th.n{ text-align:right; font-variant-numeric:tabular-nums; padding-right:1.2em; }
+  .tw{ overflow-x:auto; margin:1.6em 0; }
+  pre.cite{ white-space:pre-wrap; font:.84em/1.5 "Courier New",Courier,monospace; background:#f6f6f6; border:1px solid var(--rule); padding:.9em 1em; overflow-x:auto; }
+  a{ color:var(--link); text-decoration:none; } a:hover{ text-decoration:underline; }
+  .note{ font-size:.86em; color:var(--mut); border-top:1px solid var(--rule); margin-top:3em; padding-top:1.2em; }
+  @media (max-width:600px){ body{ font-size:16px; } .page{ padding:34px 18px 56px; } p,figcaption,caption{ text-align:left; } .abstract{ padding:0; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+<h1>A distance-weighted wildfire emission index for Singapore haze: diagnostic value and limited incremental forecast skill, 2014–2026</h1>
+<p class="author">Ahmed Khalil Hafsi</p>
+<p class="byline">Preprint draft · 15 September 2026 · Data through 13 September 2026</p>
+<p class="links"><a href="paper.pdf">Full text (PDF)</a> · <a href="https://github.com/ahmed-khalil-hafsi/sg-haze" rel="noopener">Code and data pipeline</a></p>
+
+<div class="abstract">
+<p><b>Abstract.</b> Episodic haze in Singapore is driven by biomass burning in Sumatra and Borneo. This note examines how much of the day-to-day variation in Singapore's air quality can be recovered from openly available, near-real-time fire emission estimates alone. Daily wildfire carbon emissions from the Copernicus Atmosphere Monitoring Service Global Fire Assimilation System (CAMS GFAS v2, 0.1°) are aggregated into a scalar index by weighting each grid cell with an exponential decay in great-circle distance from Singapore, and the index is related to the National Environment Agency 24-hour Pollutant Standards Index (PSI) over the June–November seasons of 2014–2026. In-sample, a square-root response to the index lagged by one day with a 900&nbsp;km decay length correlates with PSI at <i>r</i>&nbsp;=&nbsp;0.72. Under nested leave-one-season-out cross-validation with forecast-consistent lags, however, the index alone (<i>R</i>²&nbsp;=&nbsp;0.43) is substantially outperformed by persistence (<i>R</i>²&nbsp;=&nbsp;0.67). Added to a first-order autoregressive model of PSI, the index reduces pooled root-mean-square error by 3.6% (95% CI 1.1–5.3%, season-block bootstrap), a small but consistent improvement concentrated in the 2015 episode. Non-negative least-squares apportionment over distance–bearing bins places 65% of the fitted fire contribution in the southern and south-eastern sectors at 250–1200&nbsp;km, with wide uncertainty (95% CI 24–81%). The index is therefore better suited to diagnosing the regional fire situation than to forecasting PSI.</p>
+</div>
+
+<h2>Forecast skill</h2>
+<div class="tw">
+<table>
+  <thead><tr><th>Model</th><th class="n">R², all</th><th class="n">RMSE, all</th><th class="n">R², fire seasons</th><th class="n">RMSE, fire seasons</th></tr></thead>
+  <tbody>
+    <tr><td>Persistence</td><td class="n">0.669</td><td class="n">9.39</td><td class="n">0.689</td><td class="n">12.41</td></tr>
+    <tr><td>AR(1)</td><td class="n">0.692</td><td class="n">9.06</td><td class="n">0.705</td><td class="n">12.09</td></tr>
+    <tr><td>Index alone</td><td class="n">0.426</td><td class="n">12.36</td><td class="n">0.436</td><td class="n">16.71</td></tr>
+    <tr><td>AR(1) + index</td><td class="n"><b>0.716</b></td><td class="n"><b>8.70</b></td><td class="n"><b>0.731</b></td><td class="n"><b>11.54</b></td></tr>
+  </tbody>
+  <caption><b>Table 1.</b> Nested leave-one-season-out performance, June–November 2014–2026, with structure re-selected inside each fold and lags of at least one day. RMSE in PSI units. Fire seasons: 2014, 2015, 2019, 2023, 2026.</caption>
+</table>
+</div>
+
+<h2>Figures</h2>
+
+<figure>
+  <img src="img/fig1_map.png" alt="Map of daily wildfire carbon emissions across Southeast Asia on 13 September 2026" loading="lazy">
+  <figcaption><b>Figure 1.</b> Daily wildfire carbon emissions on 13 September 2026, native 0.1° GFAS grid. Domain total 2.30&nbsp;Mt&nbsp;C against a global total of 4.47&nbsp;Mt&nbsp;C.</figcaption>
+</figure>
+
+<figure>
+  <img src="img/fig2_index_psi.png" alt="Emission index and observed PSI for 2015, 2019 and 2026" loading="lazy">
+  <figcaption><b>Figure 2.</b> Index (filled) and observed 24-hour PSI (solid) for 2015, 2019 and 2026 to date; the dashed line is the PSI implied by the in-sample fit.</figcaption>
+</figure>
+
+<figure>
+  <img src="img/fig3_skill.png" alt="Out-of-sample R-squared by season for persistence, AR(1), index alone, and AR(1) plus index" loading="lazy">
+  <figcaption><b>Figure 3.</b> Out-of-sample <i>R</i>² by held-out season. Fire-affected seasons in bold.</figcaption>
+</figure>
+
+<figure>
+  <img src="img/fig4_apportionment.png" alt="In-sample source apportionment by bearing and distance, provincial lag correlations, and index-PSI scatter" loading="lazy">
+  <figcaption><b>Figure 4.</b> In-sample source apportionment, provincial lag correlations, and all June–November days. Bootstrap intervals are reported in the paper; the ranking of individual bins is not stable.</figcaption>
+</figure>
+
+<figure>
+  <img src="img/fig5_season.png" alt="Cumulative seasonal weighted emissions for each season from 2003 to 2026" loading="lazy">
+  <figcaption><b>Figure 5.</b> Cumulative weighted emissions from 1 June, 2003–2026. The 2026 season ranks fifth of 24 as of 13 September.</figcaption>
+</figure>
+
+<h2>Cite as</h2>
+<pre class="cite">Hafsi, A. K. (2026). A distance-weighted wildfire emission index for Singapore
+haze: diagnostic value and limited incremental forecast skill, 2014–2026.
+Preprint. https://github.com/ahmed-khalil-hafsi/sg-haze</pre>
+
+<p class="note">Independent work, not affiliated with or endorsed by ECMWF, the Copernicus programme or the National Environment Agency of Singapore. Data: CAMS GFAS v2 (Copernicus licence); NEA 24-hour PSI via data.gov.sg (Singapore Open Data Licence). This is not health guidance; official air quality information for Singapore is published at <a href="https://www.haze.gov.sg" rel="noopener">haze.gov.sg</a>.</p>
+
+</div>
+</body>
+</html>

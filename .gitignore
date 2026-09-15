@@ -1,0 +1,12 @@
+# downloaded data and intermediates - regenerate with pipeline/run_all.sh
+cache/
+work/
+*.parquet
+*.npz
+psi_days/
+psi_24h.csv
+# tooling
+__pycache__/
+.wrangler/
+node_modules/
+.DS_Store

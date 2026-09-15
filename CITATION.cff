@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite it as below."
+title: "sg-haze: a distance-weighted wildfire emission index for Singapore haze"
+authors:
+  - family-names: Hafsi
+    given-names: Ahmed Khalil
+date-released: 2026-09-15
+license: MIT
+repository-code: "https://github.com/ahmed-khalil-hafsi/sg-haze"
+url: "https://sg-haze.mail-7dd.workers.dev"
+keywords: [haze, wildfire, air quality, Singapore, CAMS GFAS, PSI]
+preferred-citation:
+  type: report
+  title: "A distance-weighted wildfire emission index for Singapore haze: diagnostic value and limited incremental forecast skill, 2014–2026"
+  authors:
+    - family-names: Hafsi
+      given-names: Ahmed Khalil
+  year: 2026
+  status: preprint
