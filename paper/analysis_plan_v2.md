@@ -90,3 +90,23 @@ and M9 the choice maximises training-fold R² of the full model.
   leave-one-season-out folds, with metrics computed by the same code as for
   M1–M9. Any prediction intervals will be assessed for empirical coverage on
   held-out seasons.
+
+## Deviations from this plan
+
+**D1 — wind level, 850 hPa → 100 m (recorded 15 September 2026, before any v2
+results were computed).** After this plan was committed, the Open-Meteo
+historical archive turned out to return no values for 850 hPa wind: every
+hour is null, for both the `era5` and the default model mix, in 2015 and in
+2024. It does supply ERA5 wind at 100 m above ground for the whole 2014–2026
+period. Φ_wind therefore uses the daily vector-mean **100 m** wind, with the
+same points (400 km along each sector's centre bearing), the same
+toward-Singapore component, the same max(0, ·) rule and the same models. No
+other change was made. Boundary-layer height, which is also available, is
+**not** added to the confirmatory models.
+
+Physical rationale: smoke from smouldering peat fires, which dominate
+Indonesian emissions, rises only a short way and is largely confined to the
+boundary layer, so 100 m wind is a defensible transport level. An 850 hPa
+sensitivity run using ERA5 pressure-level data from the Copernicus Climate
+Data Store remains possible and, if performed, will be reported as a
+sensitivity analysis.
