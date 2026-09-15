@@ -6,6 +6,14 @@ authors:
     given-names: Ahmed Khalil
 date-released: 2026-09-15
 license: MIT
+doi: "10.5281/zenodo.22764304"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22764304"
+    description: "Concept DOI, resolves to the latest release"
+  - type: doi
+    value: "10.5281/zenodo.22764305"
+    description: "Release 'research', the version described in the preprint"
 repository-code: "https://github.com/ahmed-khalil-hafsi/sg-haze"
 url: "https://sg-haze.mail-7dd.workers.dev"
 keywords: [haze, wildfire, air quality, Singapore, CAMS GFAS, PSI]
@@ -17,3 +25,4 @@ preferred-citation:
       given-names: Ahmed Khalil
   year: 2026
   status: preprint
+  doi: "10.5281/zenodo.22764305"

@@ -27,6 +27,8 @@
   #text(11.5pt)[Ahmed Khalil Hafsi]
   #v(0.25em)
   #text(9.5pt, fill: luma(80))[Preprint draft · 15 September 2026 · Data through 13 September 2026]
+  #v(0.15em)
+  #text(9.5pt, fill: luma(80))[#link("https://doi.org/10.5281/zenodo.22764305")[doi:10.5281/zenodo.22764305]]
 ]
 
 #v(1.2em)
@@ -160,7 +162,7 @@ Natural extensions are the addition of reanalysis winds and precipitation, direc
 
 = Code and data availability
 
-All code, the fitted coefficients and the figures are available at #link("https://github.com/ahmed-khalil-hafsi/sg-haze")[github.com/ahmed-khalil-hafsi/sg-haze]. The input datasets are publicly available from their providers [1, 2] and are not redistributed.
+All code, the fitted coefficients and the figures are available at #link("https://github.com/ahmed-khalil-hafsi/sg-haze")[github.com/ahmed-khalil-hafsi/sg-haze] and archived at Zenodo under #link("https://doi.org/10.5281/zenodo.22764305")[doi:10.5281/zenodo.22764305] (release described here) and #link("https://doi.org/10.5281/zenodo.22764304")[doi:10.5281/zenodo.22764304] (all versions). The input datasets are publicly available from their providers [1, 2] and are not redistributed.
 
 #v(0.6em)
 #text(9pt)[

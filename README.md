@@ -1,11 +1,14 @@
 # sg-haze
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22764304.svg)](https://doi.org/10.5281/zenodo.22764304)
+
 A distance-weighted wildfire emission index for Singapore haze, built entirely
 from open, near-real-time data.
 
 **Author:** Ahmed Khalil Hafsi ·
 **Paper:** [`paper/paper.pdf`](paper/paper.pdf) ·
-**Web version:** https://sg-haze.mail-7dd.workers.dev
+**Web version:** https://sg-haze.mail-7dd.workers.dev ·
+**DOI:** [10.5281/zenodo.22764305](https://doi.org/10.5281/zenodo.22764305)
 
 Every morning CAMS publishes satellite-derived wildfire carbon emissions on a
 0.1° grid. This project weights every fire cell by its distance from Singapore,
@@ -131,4 +134,7 @@ See [`CITATION.cff`](CITATION.cff), or:
 
 > Hafsi, A. K. (2026). *A distance-weighted wildfire emission index for Singapore
 > haze: diagnostic value and limited incremental forecast skill, 2014–2026.*
-> Preprint. https://github.com/ahmed-khalil-hafsi/sg-haze
+> Preprint. https://doi.org/10.5281/zenodo.22764305
+
+To cite the software regardless of version, use the concept DOI
+[10.5281/zenodo.22764304](https://doi.org/10.5281/zenodo.22764304).
